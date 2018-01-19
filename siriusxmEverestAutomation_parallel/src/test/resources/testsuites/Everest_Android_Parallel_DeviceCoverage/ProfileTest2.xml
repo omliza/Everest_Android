@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ProfileTest Suite" configfailurepolicy="continue"
+	thread-count="2"  parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="ProfileTest3" enabled = "true" >
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.ProfileTest1">
+				<methods>
+					<include name="testverifyProfileRecentlyPlayed"></include>
+				 	<include name="validateAbout" /> 
+					<include name="validateBuildVersion" />
+					<include name="validateProfileManageAccout"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="ProfileTest4" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.ProfileTest1">
+				<methods>
+					 <include name="verifyProfileSignOut" />
+					<include name="validateSendFeedback" />
+					<include name="validateProfileHelpSupport"></include> 
+					<include name="validatePrivacyPolicy" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

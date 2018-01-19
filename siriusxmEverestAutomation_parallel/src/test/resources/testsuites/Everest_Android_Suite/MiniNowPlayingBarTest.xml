@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MiniNowPlayingBarTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="MiniNowPlayingBarTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.MiniNowPlayingBarTest">
+				<methods>
+					<include name="verifyMiniBar"></include>
+					<include name="verifyMiniBarScreen"></include>
+					<include name="verifyMiniBar1"></include> 
+					<include name="verifyElevationShadowMiniBar"></include>
+					<include name="verifyNowPlayingMinimizeButton"></include>
+					<include name="verifyNowPlayingDisallowedMinimizeButton"></include>
+					<include name="verifyNowPlayingRestrictedMinimizeButton"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

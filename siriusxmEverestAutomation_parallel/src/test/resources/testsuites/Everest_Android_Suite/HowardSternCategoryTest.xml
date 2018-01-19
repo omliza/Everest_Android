@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HowardSternCategoryTest suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+	<test name="HowardSternCategoryTest" preserve-order="true"
+		parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.HowardSternCategoryTest">
+				<methods>
+					<include name="howardSternBackButton"></include>
+					<include name="validateHowardShowListing"></include>
+					<include name="validateHowardShowListingItem"></include>
+					<include name="verifyHowardChannelcarouselHeader"></include>
+					<include name="verifyHowardChannelcarousel"></include>
+					<include name="verifyHowardLatestEpisodescarouse1"></include>
+					<include name="ValidateHowardBreadcrumb"></include>
+					<include name="verifyHowardSuperCategory"></include>
+					<include name="ValidateHowardHeader"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

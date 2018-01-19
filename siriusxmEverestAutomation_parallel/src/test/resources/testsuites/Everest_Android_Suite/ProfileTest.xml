@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ProfileTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="ProfileTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.ProfileTest">
+				<methods>
+					 <include name="ProfileSignOutValidation" />
+					<include name="validateNotificationProfile" />
+					<include name="validateProfile" /> 
+					<include name="verifyProfileMenuList" /> 
+					<include name="validateAbout" />
+					<include name="validateBuildVersion" />
+					<include name="verifyProfileSignOut"></include>
+					<include name="validateProfileHelpSupport"></include> 
+					<include name="validateProfileFordSYNCAppLink"></include> 
+					<include name="testVerifyApplicationSettings"></include>
+					<include name="testverifyProfileRecentlyPlayed" />
+					<include name="verifySendFeedbackFloating" />
+					<include name="validateSendFeedback"></include> 
+					<include name="validateProfileManageAccout"></include> 
+					<include name="validateCustomerAgreement" />
+					<include name="validatePrivacyPolicy" />
+					
+					
+					<!-- passed -->
+					
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

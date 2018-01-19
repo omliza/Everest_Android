@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OnDemandEpisodesListingTest" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="OnDemandEpisodesListingTest" preserve-order="true"
+		parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.OnDemandEpisodesListingTest">
+				<methods>
+					<include name="onDemandEpisodeAirdate"></include>
+					<include name="verifyOnDemandEpisodeFilterNoResult"></include>
+					<include name="verifyOnDemandEpisodeFilter"></include>
+					<include name="OnDemandEpisodeFilterCloseButton"></include>
+					<include name="verifyOnDemandEpisodeFilterCancel"></include>
+					<include name="onDemandEpisodeTile"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

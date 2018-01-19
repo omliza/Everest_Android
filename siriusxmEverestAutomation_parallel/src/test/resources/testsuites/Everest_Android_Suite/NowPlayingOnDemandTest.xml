@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlaying OnDemand Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingOnDemandTest" preserve-order="true"
+		parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.OnDemandTest">
+				<methods>
+					<include name="verifyEpisodeListingBackButton"></include>
+					<include name="onDemandShowstab"></include>
+					<include name="onDemanddisallowedShowArt"></include>
+					<include name="verifyRecentbanner"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OnDemandEpisodesListingTest" configfailurepolicy="continue"
+	thread-count="2"  parallel="tests"  verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="OnDemandEpisodesListingTest1" enabled = "true" >
+	<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />	
+		<classes>
+			<class name="com.sxm.mobile.tests.OnDemandEpisodesListingTest">
+				<methods>
+					<include name="verifyOnDemandEpisodeFilterNoResult"></include>
+					<include name="verifyOnDemandEpisodeFilter"></include>
+					<include name="OnDemandEpisodeFilterCloseButton"></include>
+					<include name="onDemandEpisodeAirdate"></include>
+					<include name="verifyOnDemandEpisodeFilterCancel"></include>
+					<include name="onDemandEpisodeTile"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="OnDemandEpisodesListingTest2" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.OnDemandEpisodesListingTest">
+				<methods>
+					<include name="onDemandEpisodeAirdate"></include>
+					<include name="verifyOnDemandEpisodeFilterCancel"></include>
+					<include name="onDemandEpisodeTile"></include>
+					<include name="verifyOnDemandEpisodeFilterNoResult"></include>
+					<include name="verifyOnDemandEpisodeFilter"></include>
+					<include name="OnDemandEpisodeFilterCloseButton"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Everest_Android_Daily" configfailurepolicy="continue"
+	verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+	<suite-files>
+		<suite-file path="NowPlayingDisallowedTest.xml" />
+		<suite-file path="OnDemandEpisodesListingTest.xml" />
+		<suite-file path="HomeTest.xml" />
+		<suite-file path="SearchTest.xml" />
+		<suite-file path="NavigationTest.xml" />
+		<suite-file path="ProfileTest.xml" />
+		<suite-file path="FavoritesTest.xml" />
+		<suite-file path="FavoriteTest2.xml" />
+		<suite-file path="MiniNowPlayingBarTest.xml" />
+		<suite-file path="NowPlayingOnDemandTest.xml" />
+		<suite-file path="NowPlayingUnrestrictedTest.xml" />
+		<suite-file path="CategoryFilterTest1.xml" />
+		<suite-file path="CategoryFilterTest2.xml" />
+		<suite-file path="NowPlayingDMCATest.xml" />
+		<suite-file path="NowPlayingApronTest.xml" />
+		<suite-file path="EDPMenuTest.xml" />
+		<suite-file path="CategoryTest1.xml" />
+		<suite-file path="CategoryTest2.xml" />
+		<suite-file path="HowardSternCategoryTest.xml" />
+		<suite-file path="LoginTest.xml" />
+		<!-- <suite-file path="NowPlayingOnDemandTest.xml" /> <suite-file path="HomeTest.xml" 
+			/> <suite-file path="OnDemandEpisodesListingTest.xml" /> <suite-file path="NavigationTest.xml" 
+			/> <suite-file path="ProfileTest.xml" /> <suite-file path="ProfileTest2.xml" 
+			/> <suite-file path="NowPlayingDisallowedTest.xml" /> <suite-file path="NowPlayingUnrestrictedTest.xml" 
+			/> <suite-file path="NowPlayingDMCATest.xml" /> <suite-file path="NowPlayingApronTest.xml" 
+			/> <suite-file path="HowardSternCategoryTest.xml" /> <suite-file path="EDPMenuTest.xml" 
+			/> <suite-file path="MiniNowPlayingBarTest.xml" /> <suite-file path="FavoritesTest.xml" 
+			/> <suite-file path="FavoriteTest2.xml" /> <suite-file path="CategoryTest1.xml" 
+			/> <suite-file path="CategoryTest2.xml" /> <suite-file path="CategoryFilterTest1.xml" 
+			/> <suite-file path="CategoryFilterTest2.xml" /> <suite-file path="LoginTest.xml" 
+			/> <suite-file path="SearchTest.xml"/> -->
+	</suite-files>
+</suite>
+
+ 

@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlaying suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingTest1">
+				<methods>
+				<include name="verifyNowPlayingDisallowedMinimizeButton"></include>
+				 <include name="nowPlaying_SportsPlaybyPlaychannels"></include>
+				<include name="nowPlaying_OnDemanddisallowedProgressbar"></include>
+				<include name="nowPlaying_DisallowedLinearTuner"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

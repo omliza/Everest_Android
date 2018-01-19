@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlayingDisallowedTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingDisallowedTest" preserve-order="true"
+		parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingTest">
+				<methods>
+					<!-- <include name="dmcaOnDemandFavoriteIcon"></include>
+					<include name="onDemandDisallowedPlayerControls"></include>
+					<include name="onDemandDisallowedElapsedTime"></include>
+					 <include name="disallowedCategoryChannelNumber"></include>
+					<include name="verifydisallowedCategory"></include>
+					<include name="disallowedCategoryShowArt"></include>
+					<include name="disallowedPalyercontrols"></include>
+					<include name="onDemanddisallowedShowNamePDT"></include>
+					<include name="disallowedCategoryChannelLogo"></include>
+					<include name="onDemanddisallowedshowLogo"></include> 
+					<include name="VerifyDisallowedChannelProgressBar"></include> -->
+					
+					<include name="disallowedCategoryShownamePDT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlayingDMCATest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingDMCATest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingDMCATest">
+				<methods>
+					<include name="verifydmcaRestrictedShownamePDT"></include>
+					<include name="disallowedPalyercontrols"></include>
+					<include name="verifyonDemanddmcaRestrictedProgressbar"></include>
+					<include name="onDemanddmcaRestrictedShownamePDT"></include>
+					<include name="onDemanddmcaPlayerControls"></include>
+					<include name="dmcaRestrictedPlayerControl"></include>
+					<include name="dmcaPalyercontrols"></include>
+					<include name="dmcaRestrictedChannelNumber"></include>
+					<include name="dmcaRestrictedShowArt"></include>
+					<include name="onDemanddmcaRestrictedShowLogo"></include>
+					<include name="dmcaOnDemandFavoriteIcon"></include>
+					<include name="verifyonDemanddmcaRestrictedAlbumArt"></include>
+					<include name="dmcaRestrictedChannelLogo"></include>
+					<include name="VerifyOnDemandDMCARestrictedSkipCounts"></include>
+					<include name="disallowedOnDemandFavoriteIcon"></include>
+					<include name="onDemanddmcaRestrictedShownamePDT"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

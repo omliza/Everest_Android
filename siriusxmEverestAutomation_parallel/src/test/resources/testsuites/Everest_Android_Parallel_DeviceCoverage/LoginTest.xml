@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginTest Suite" configfailurepolicy="continue"
+	thread-count="2" parallel="tests"  verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="LoginTest1" enabled = "true" >
+	<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.LoginTest">
+				<methods>
+					<include name="verifyloginWithWrongCredential"></include>
+				    <include name="loginWithValidCredential"></include>
+					<include name="loginAutologin"></include>
+					<include name="loginWithBusinessCredential"></include>
+					<include name="validateUsLogin"></include>
+					<include name="validateCredentialSecurity"></include>
+					<include name="verifyPasswordFeild"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="LoginTes2t" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.LoginTest">
+				<methods>
+					<include name="validateLoginElements"></include>
+					<include name="loginWithRightCredential" />
+					<include name="validateLoginSignInButtonEnabled"></include>
+					<include name="validateLoginPrefillUsername"></include>
+					<include name="verifyloginWithWrongCredential1" />
+					<include name="validateCALogin"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

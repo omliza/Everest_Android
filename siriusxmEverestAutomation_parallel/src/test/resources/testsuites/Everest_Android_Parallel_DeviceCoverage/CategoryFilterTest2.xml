@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CategoryFilterTest Suite" configfailurepolicy="continue"
+	thread-count="2" parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="CategoryFilterTest3" enabled = "true" >
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.CategoryFilterTest">
+				<methods>
+					<include name="ValidateonDemandEpisodeListing"></include>
+					<include name="verifyonDemandFilter"></include>
+					<include name="validateBreadcrumb"></include>
+					<include name="onDemandFilteredResults"></include>
+					<include name="verifyonDemandTabCancelButton"></include>
+					<include name="onDemandTabCloseButton"></include>
+					<include name="onDemandTabValidation"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="CategoryFilterTest4" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.CategoryFilterTest">
+				<methods>
+					<include name="onDemandFilteredResults"></include>
+					<include name="verifyonDemandTabCancelButton"></include>
+					<include name="onDemandTabCloseButton"></include>
+					<include name="onDemandTabValidation"></include>
+					<include name="ValidateonDemandEpisodeListing"></include>
+					<include name="verifyonDemandFilter"></include>
+					<include name="validateBreadcrumb"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

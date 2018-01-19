@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="EDPMenuTest suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="EDPMenuTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.EDPMenuTest">
+				<methods>
+					<include name="VerifyEDPAddShowToFavorites"></include>
+					<include name="VerifyEDPaddChannelToFavorites"></include>
+					<include name="VerifyEDPFavorites"></include>
+					<include name="verifyChannelEDPMenu"></include>
+					<include name="verifyShowEDPMenu"></include>
+					<include name="verifyEpisodeEDPMenu"></include>
+					<include name="verifyOnDemandEDPMenu"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

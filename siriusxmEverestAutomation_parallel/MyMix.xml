@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SXMDaily" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_IOS" />
+	<!-- for ios that platform value should be ios -->
+
+	<test name="MyMix" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.ios.sanity.refactor.tests.MyMixTest">
+				<methods>
+					<include name="nplHeaderModifyCustomMixIcon"></include>
+					<!-- <include name="testCustomMixSliderScreenCancelButton"></include>
+					<include name="testMyMixShare" />
+					<include name="testMyMixFavValidation" />
+					<include name="testPlayPauseProgressbarValidation"></include>
+					<include name="testDeleteMymixplayingChannel"></include>
+					<include name="testMyMixChannelEDP" />
+					<include name="validateMinimizedPlayHead" />
+					<include name="testCustomMixSliderSettingsScreen"></include>
+					<include name="testNewCustomChannelAdded"></include>
+					<include name="testCustomMixNPLHeaderAlbumArt"></include> 
+                    <include name="testNPLCustomMixMLT"/> 
+                    <include name="testNPLCustomMixArtistBioModule"></include>
+                    <include name="testNPLCustomMixBuyIcon"></include> -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

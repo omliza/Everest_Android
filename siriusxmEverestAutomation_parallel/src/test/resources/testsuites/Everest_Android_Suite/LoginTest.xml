@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="LoginTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.LoginTest">
+				<methods>
+						<!-- passed -->
+						 <include name="loginWithBusinessCredential"></include>
+						<include name="verifyPasswordFeild"></include>
+						<include name="loginWithWrongCredential"></include>
+						<include name="verifyloginWithWrongCredential"></include>
+						<include name="loginWithRightCredential"></include>
+						<include name="loginAutologin"></include>
+						<include name="verifyloginWithWrongCredentialErrorMsg"></include>
+						<include name="validateLoginAfterSignout"></include>
+						<include name="validateLoginPrefillUsername"></include>
+						<include name="validateLoginSignInButtonEnabled"></include>
+						<include name="validateUsLogin"></include>
+						<include name="validateCALogin"></include>
+						<include name="validateLoginElements"></include> 
+						<include name="validateLoginAfterSignOutWhileAudioIsPlayed"></include>
+						<include name="validateCredentialSecurity"></include>	
+						
+				</methods> 
+			</class>
+		</classes>
+	</test>
+</suite>
+

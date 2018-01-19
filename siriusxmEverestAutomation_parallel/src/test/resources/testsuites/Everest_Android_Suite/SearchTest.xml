@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SearchTest suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="SearchTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.SearchTest">
+				<methods>
+				<include name="verifySearchVideoOnDemandCarouselTiles"></include>
+				<include name="verifySearchcancel"></include>
+				<include name="verifyFirstSearchState"></include>
+				<include name="verifyRecentSearch"></include>
+				<include name="verifySearchVideoOnDemandCarouselHeader"></include>
+				<include name="verifySearchNoSearchResultsPage"></include>
+				<include name="testVerifySearchByChannelNumber"></include>
+				<include name="verifySearchTopResults"></include>
+				<include name="verifyRecentPreviousSearch"></include>
+				<include name="verifySearchClearButton"></include>
+				<include name="testVerifySuggestedSearches"></include>
+				<include name="verifySearchAudioOnDemandCarousel"></include>
+				<include name="testVerifyAODCarousel"></include>
+				<include name="verifySearchEntry"></include>
+				<include name="verifySearchAudioOnDemandCarouselHeader"></include>
+				<include name="testVerifySearcSuggestedSearchesHeader"></include>
+		 	</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

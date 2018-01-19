@@ -1,0 +1,161 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SXMDaily" configfailurepolicy="continue"
+	thread-count="2" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="Sprint Suite" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.aod.tests.OnDemandTest">
+				<methods>
+					<include name="verifyRecentbanner"></include>
+					<include name="onDemanddisallowedShowArt"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.HomeTest">
+				<methods>
+					<include name="verifyHomeFooter"></include>
+					<include name="verifyHomeSuperCategoryCategoryListing"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.OnDemandEpisodesListingTest">
+				<methods>
+					<include name="onDemandEpisodeAirdate"></include>
+					<include name="onDemandEpisodeTile"></include>
+					<include name="verifyOnDemandEpisodeFilterNoResult"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.NavigationTest">
+				<methods>
+					<include name="mainNavigation"></include>
+					<include name="mainNavigationverify"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.ProfileTest">
+				<methods>
+					<include name="ProfileSignOutValidation" />
+					<include name="validateAbout" /> 
+				 	<include name="validateProfileManageAccout"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.NowPlayingTest">
+				<methods>
+					<include name="dmcaOnDemandFavoriteIcon"></include>
+					<include name="disallowedCategoryShownamePDT"></include>
+					<include name="disallowedPalyercontrols"></include>
+					<include name="disallowedCategoryChannelLogo"></include>
+				</methods>
+			</class>
+			
+				
+			<class name="com.sxm.mobile.aod.tests.NowPlayingUnrestrictedTest">
+				<methods>
+					<include name="validateHowardShowNamePdt"></include>
+					<include name="validateUnrestrictedShowArt"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.NowPlayingDMCATest">
+				<methods>
+					<include name="verifydmcaRestrictedShownamePDT"></include>
+					<include name="onDemandPlayerControls"></include>
+				</methods>
+			</class>	
+			
+			<class name="com.sxm.mobile.aod.tests.NowPlayingApronTest">
+				<methods>
+					<include name="verifyBuySong" />
+					<include name="verifyUnrestrictedLiveSaveLater" />
+					<include name="validateDisallowedShowsAvaialble" />
+					<include name="validateRestrictedShowsAvaialble" />
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.HowardSternCategoryTest">
+				<methods>
+					<include name="validateHowardShowListing"></include>
+					<include name="validateHowardShowListingItem"></include>
+					<include name="verifyHowardChannelcarouselHeader"></include>
+					<include name="verifyHowardLatestEpisodescarouse1"></include>	
+				</methods>
+			</class>
+			
+			
+			<class name="com.sxm.mobile.aod.tests.EDPMenuTest">
+				<methods>
+					<include name="VerifyEDPFavorites"></include>
+					<include name="verifyChannelEDPMenu"></include>
+					<include name="verifyShowEDPMenu"></include>		
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.MiniNowPlayingBarTest">
+				<methods>
+					<include name="verifyElevationShadowMiniBar"></include>
+					<include name="verifySendFeddbackFloating"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.FavoritesTest">
+				<methods>
+					<include name="verifyfavoritesListItem"></include>
+					<include name="verifyfavoritesConfirmButton"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.FavoritesTest1">
+				<methods>
+					<include name="validateunrestictedFavoriteIcon"></include>
+					<include name="favoriteValidation"></include>
+					<include name="validateDisallowedFavoriteIcon"></include>
+					<include name="validateOnDemandRestrictedFavoriteIcon"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.CategoryTest">
+				<methods>
+					<include name="OnDemandShowsValidation"></include>
+					<include name="verifyOnDemandShowsValidation"></include>
+					<include name="verifyChannelList"></include>
+					<include name="verifyChannelCategory"></include>
+				</methods>
+			</class>
+			
+			
+			<class name="com.sxm.mobile.aod.tests.CategoryFilterTest">
+				<methods>
+					<include name="verifyChannelFilterCancelButton"></include>
+					<include name="verifyChannelFilterResults"></include>
+					<include name="ValidateonDemandEpisodeListing"></include>
+					<include name="verifyonDemandFilter"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.LoginTest">
+				<methods>
+					<include name="loginWithWrongCredential"></include>
+					<include name="loginAutologin"></include>
+					<include name="loginWithBusinessCredential"></include>
+					<include name="validateLoginElements"></include>
+				</methods>
+			</class>
+			
+			<class name="com.sxm.mobile.aod.tests.SearchTest">
+				<methods>
+					<include name="testVerifySearchByChannelNumber"></include>
+					<include name="verifySearchcancel"></include>
+					<include name="verifyRecentSearchAudioOndemand"></include>
+					<include name="verifySearchTopResults"></include>
+				</methods>
+			</class>
+	</classes>
+	</test>
+</suite>
+

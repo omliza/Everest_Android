@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CategoryFilterTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="CategoryFilterTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.CategoryFilterTest">
+				<methods>
+					 <include name="verifyChannelFilter"></include>
+					<include name="verifyChannelClearButton"></include>
+					<include name="verifyChannelFilterCancelButton"></include>
+					<include name="verifyChannelFilterResults"></include> 
+					<include name="verifyChannelFilterNoResultScreen"></include>
+					<include name="ChannelFilter"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

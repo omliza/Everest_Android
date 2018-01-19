@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlayingApronTest Suite" configfailurepolicy="continue"
+	thread-count="2"  parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingApronTest Suite1" enabled = "true" >
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingApronTest">
+				<methods>
+					<include name="validateRestrictedShowsAvaialble" />
+					<include name="validateUnrestrictedShowsAvaialble" />
+					<include name="validateAdditionaEpisodes" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="NowPlayingApronTest Suite2" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingApronTest">
+				<methods>
+					<include name="verifyBuySong" />
+					<include name="verifyUnrestrictedonDemandSaveForLater" /><!--  -->
+					<include name="verifyUnrestrictedLiveSaveLater" />
+					<include name="validateDisallowedShowsAvaialble" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlayingUnrestrictedTest Suite" configfailurepolicy="continue"
+	thread-count="2" parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingUnrestrictedTest1" enabled="true">
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingUnrestrictedTest">
+				<methods>
+					<include name="nplUnrestricted_validateHowardChannelLogo"></include>
+					<include name="nplUnrestricted_validateHowardShowNamePdt"></include>
+					<include name="nplUnrestricted_ShownamePDT"></include> 
+					<include name="nplUnrestricted_ShownamePDT"></include>
+					<include name="nplUnrestricted_LinearTuner"></include>	
+					<include name="nplUnrestricted_validateUnrestrictedProgressBar"></include>
+					<include name="nplUnrestricted_ElapsedTime"></include>
+					<include name="nplUnrestricted_PlayerControls"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="NowPlayingUnrestrictedTest2" enabled="true">
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingUnrestrictedTest">
+				<methods>
+					<include name="nplUnrestricted_validateUnrestrictedShowArt"></include>
+					<include name="nplUnrestricted_verifyhowardCategory"></include>
+					<include name="nplUnrestricted_validateHowardChannelNumber"></include>
+					<include name="nplUnrestricted_HowardShowLogo"></include>
+					<include name="nplUnrestricted_howardSuperCategory"></include>
+					<include name="nplUnrestricted_validateHowardOnDEmnadShowNamePdt"></include>
+					<include name="nplUnrestricted_validateUnrestrictedOnDemandShowArt"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

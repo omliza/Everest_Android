@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ProfileTest Suite" configfailurepolicy="continue"
+	thread-count="2"  parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="ProfileTest1" enabled = "true" >
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.ProfileTest">
+				<methods>
+					<include name="ProfileSignOutValidation" />
+					<include name="validateNotificationProfile" />
+					<include name="validateCustomerAgreement" />
+					<include name="validateProfile" /> 
+					<include name="verifyProfileMenuList" /> 
+					<include name="validateAbout" />
+					<include name="validateBuildVersion" />
+					<include name="validateCustomerAgreement" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="ProfileTest2" enabled = "true" >
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.ProfileTest">
+				<methods>
+					<include name="validatePrivacyPolicy" />
+					<include name="validateSendFeedback"></include>
+					<include name="validateProfileManageAccout"></include>
+					<include name="validateProfileHelpSupport"></include> 
+					<include name="validateProfileFordSYNCAppLink"></include>
+					<include name="testVerifyApplicationSettings"></include>
+					<include name="testverifyProfileRecentlyPlayed" />
+					<include name="verifySendFeedbackFloating" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

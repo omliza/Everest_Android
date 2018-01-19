@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SearchTest suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="SearchTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.DeviceVitalsTests">
+				<methods>
+				<include name="onDemanddisallowedShowArt"></include>
+				<include name="verifySearchAudioOnDemandCarouselHeader" />
+				<include name="nowPlaying_SportsPlaybyPlaychannels" />
+				<include name="onDemandEpisodeAirdate" />
+				<include name="nplUnrestricted_validateUnrestrictedShowArt" />
+				<include name="validateDmcaFavoriteIcon" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

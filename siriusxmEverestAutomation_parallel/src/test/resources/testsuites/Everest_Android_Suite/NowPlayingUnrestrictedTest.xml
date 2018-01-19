@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NowPlayingUnrestrictedTest Suite"
+	configfailurepolicy="continue" thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="NowPlayingUnrestrictedTest" preserve-order="true"
+		parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.NowPlayingUnrestrictedTest">
+				<methods>
+					<include name="nplUnrestricted_validateUnrestrictedShowArt"></include>
+					<include name="nplUnrestricted_validateHowardShowNamePdt"></include>
+					<include name="nplUnrestricted_ShownamePDT"></include>
+					<include name="nplUnrestricted_validateUnrestrictedProgressBar"></include>
+					<include name="nplUnrestricted_PlayerControls"></include>
+					<include name="nplUnrestricted_verifyhowardCategory"></include>
+					<include name="nplUnrestricted_HowardShowLogo"></include>
+					<include name="nplUnrestricted_validateHowardOnDEmnadShowNamePdt"></include>
+					<include name="nplUnrestricted_validateUnrestrictedOnDemandShowArt"></include>
+					<include name="nplUnrestricted_LinearTuner"></include>
+					<include name="nplUnrestricted_validateHowardChannelLogo"></include>
+					<include name="nplUnrestricted_ShownamePDT"></include>
+					<include name="nplUnrestricted_ElapsedTime"></include>
+					<include name="nplUnrestricted_validateHowardChannelNumber"></include>
+					<include name="nplUnrestricted_howardSuperCategory"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

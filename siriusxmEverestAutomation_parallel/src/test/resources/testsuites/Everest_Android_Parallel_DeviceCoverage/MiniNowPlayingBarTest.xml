@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MiniNowPlayingBarTest Suite" configfailurepolicy="continue"
+	thread-count="2" parallel="tests" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<parameter name="parallel_run" value="Yes" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="MiniNowPlayingBarTest1" enabled="true">
+		<parameter name="device_id" value="device_id_one" />
+		<parameter name="device_model" value="device_model_one" />
+		<parameter name="login_credential" value="prod12" />
+		<classes>
+			<class name="com.sxm.mobile.tests.MiniNowPlayingBarTest">
+				<methods>
+					<include name="verifyElevationShadowMiniBar"></include>
+					<include name="verifySendFeddbackFloating"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="MiniNowPlayingBarTest2" enabled="true">
+		<parameter name="device_id" value="device_id_two" />
+		<parameter name="device_model" value="device_model_two" />
+		<parameter name="login_credential" value="prod1" />
+		<classes>
+			<class name="com.sxm.mobile.tests.MiniNowPlayingBarTest">
+				<methods>
+					 <include name="verifyMiniBar"></include>
+					<include name="verifyMiniBarScreen"></include>
+					<include name="verifyMiniBar1"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

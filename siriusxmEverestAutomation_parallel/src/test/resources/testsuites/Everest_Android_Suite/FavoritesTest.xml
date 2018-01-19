@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FavoritesTest Suite" configfailurepolicy="continue"
+	thread-count="4" verbose="1">
+	<parameter name="platform" value="Perfecto_Android" />
+	<listeners>
+		<listener class-name="com.sxm.mobile.pages.ListenerTest"></listener>
+	</listeners>
+
+	<test name="FavoritesTest" preserve-order="true" parallel="false">
+		<classes>
+			<class name="com.sxm.mobile.tests.FavoritesTest">
+				<methods>
+					<include name="verifyfavoritesConfirmButton"></include>
+					<include name="favoritesScreen"></include>
+					<include name="favoritesListItem"></include>
+					 <include name="favoritesBreadCrumb"></include>
+					<include name="verifyfavoritesListItem"></include>
+					<include name="favoritesScreenEditMOde"></include>
+					<include name="favoriteEdit"></include>
+					<include name="favoritesEditMode"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+
